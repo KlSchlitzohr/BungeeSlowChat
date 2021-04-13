@@ -1,0 +1,3 @@
+playercount: 5
+delay: 1000
+message: 'Chat is in slow chat mode. You can write again %second%.'
