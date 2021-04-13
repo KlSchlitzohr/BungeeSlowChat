@@ -30,9 +30,10 @@ public class ChatListener implements Listener {
                         String secound = (int)((slowChat.getLastMessage().get(player.getName()) + slowChat.getDelay() - System.currentTimeMillis()) / 1000) + 1 + "s";
                         player.sendMessage(ChatMessageType.CHAT,new TextComponent(slowChat.getMessage().replace("%second%",secound)));
                         event.setCancelled(true);
-                    }
-                }
-                slowChat.getLastMessage().put(player.getName(),System.currentTimeMillis());
+                    } else
+                        slowChat.getLastMessage().put(player.getName(),System.currentTimeMillis());
+                } else
+                    slowChat.getLastMessage().put(player.getName(),System.currentTimeMillis());
             }
         }
     }

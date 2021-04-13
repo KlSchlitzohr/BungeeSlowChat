@@ -54,6 +54,7 @@ public class SlowChat {
         playerCount = configuration.getInt("playercount");
         delay = configuration.getLong("delay");
         message = configuration.getString("message");
+        message = message.replace("&", "\u00A7");
     }
 
     public void quit(ProxiedPlayer proxiedPlayer) {
